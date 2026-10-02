@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: coding-quiz
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/test
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
